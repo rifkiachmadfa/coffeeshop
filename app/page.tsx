@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <>
-    <h1>ini home alone</h1>
+      <h1>INIINININININI</h1>
     </>
   );
 }
