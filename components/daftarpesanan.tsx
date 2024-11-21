@@ -8,7 +8,6 @@ const DaftarPesanan: React.FC<DaftarPesananProps> = ({ action }) => {
   return (
     <>
       <Table className="mt-10">
-        <TableCaption>A list of your recent invoices.</TableCaption>
         <TableHeader>
           <TableRow>
             <TableHead className="w-[100px]">Pemesan</TableHead>

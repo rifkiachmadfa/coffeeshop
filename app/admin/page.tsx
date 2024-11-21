@@ -13,8 +13,6 @@ export default function Admin() {
       <ProsesPesanan />
       {/* Kirim fungsi 'actionPesanan' ke DaftarPesanan */}
       <DaftarPesanan action={actionPesanan} />
-      <p>Isi defaultnya daftar menu yang tersedia, dapat diedit dan dihapus.</p>
-      <p>Menu navigasi terdiri dari thumbnail, pesanan, tambah voucher, dan logout.</p>
     </>
   );
 }
