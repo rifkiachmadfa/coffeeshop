@@ -13,7 +13,7 @@ export default function NavigationBar() {
       <NavigationMenu>
         <NavigationMenuList className="flex w-screen gap-28">
           <NavigationMenuItem>
-            <Link href="/" className="text-4xl font-bold text-white">
+            <Link href="/" className="text-4xl font-bold ">
               TIMIRI CIFFII
             </Link>
           </NavigationMenuItem>
@@ -24,7 +24,7 @@ export default function NavigationBar() {
           </NavigationMenuItem>
           <NavigationMenuItem className="flex gap-2 ">
             <Link href="/login">
-              <Button className="text-white" variant="ghost">Login</Button>
+              <Button  variant="ghost">Login</Button>
             </Link>
             <Link  href="/register">
               <Button>Register</Button>
