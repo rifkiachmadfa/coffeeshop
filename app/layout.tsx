@@ -49,8 +49,8 @@ export default function RootLayout({
           <div className="relative z-1 mt-[600px]">
 
         {children}
-          </div>
       <Footer/>
+          </div>
       </div>
           </body>
           

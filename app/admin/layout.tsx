@@ -12,7 +12,6 @@ export default function AdminLayout({
         
       <NavigasiAdmin/>
       <section className="m-10">
-  
         {children}
       </section>
       </body>

@@ -6,7 +6,7 @@ export default function Home() {
     <>
 
 
-    <div className=" flex justify-center grid grid-cols-4 gap-4 ">
+    <div className=" flex justify-center grid grid-cols-4 gap-4">
 
     <CardListProduk/>
     <CardListProduk/>
