@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function NavigationBar() {
+export default function NavigationHomePage() {
   return (
     <div>
       <NavigationMenu>
@@ -19,14 +19,18 @@ export default function NavigationBar() {
           </NavigationMenuItem>
           <NavigationMenuItem className="mx-auto">
             <div className="flex items-center w-[600px]">
-              <Input type="text" placeholder="Cari Disini Aja" className="w-full" />
+              <Input
+                type="text"
+                placeholder="Cari Disini Aja"
+                className="w-full"
+              />
             </div>
           </NavigationMenuItem>
           <NavigationMenuItem className="flex gap-2 ">
             <Link href="/login">
-              <Button  variant="ghost">Login</Button>
+              <Button variant="ghost">Login</Button>
             </Link>
-            <Link  href="/register">
+            <Link href="/register">
               <Button>Register</Button>
             </Link>
           </NavigationMenuItem>

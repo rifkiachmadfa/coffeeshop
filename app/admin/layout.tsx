@@ -1,14 +1,15 @@
 import NavigasiAdmin from "@/components/NavigasiAdmin";
 
-export default function Layout({
+export default function AdminLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <div className="">
+    <div className="min-h-screen">
+      {/* Navigasi khusus untuk halaman admin */}
       <NavigasiAdmin />
-      <section className="m-10">{children}</section>
+      <main className="p-10">{children}</main>
     </div>
   );
 }

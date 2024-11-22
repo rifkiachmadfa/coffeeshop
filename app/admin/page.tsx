@@ -10,7 +10,7 @@ export default function Admin() {
 
   return (
     <>
-      <ProsesPesanan />
+       <ProsesPesanan />
       {/* Kirim fungsi 'actionPesanan' ke DaftarPesanan */}
       <DaftarPesanan action={actionPesanan} />
     </>
