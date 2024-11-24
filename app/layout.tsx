@@ -12,9 +12,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex justify-center">
         <main className="antialiased w-[1280px] h-[100vh]">
-          <div className="">
-            <NavigasiHomePage />
-          </div>
+          <div className=""></div>
 
           <div className="">
             {children}

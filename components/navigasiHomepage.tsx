@@ -28,7 +28,7 @@ export default function NavigationHomePage() {
           </NavigationMenuItem>
           <NavigationMenuItem className="flex gap-2 ">
             <Link href="/login">
-              <Button variant="ghost">Login</Button>
+              <Button>Login</Button>
             </Link>
             <Link href="/register">
               <Button>Register</Button>
