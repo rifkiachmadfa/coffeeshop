@@ -10,8 +10,8 @@ import Link from "next/link";
 export default function NavigationHomePage() {
   return (
     <div>
-      <NavigationMenu>
-        <NavigationMenuList className="flex w-screen gap-28">
+      <NavigationMenu className="">
+        <NavigationMenuList className="h-[120px] flex w-screen gap-28 bg-[#C75000]">
           <NavigationMenuItem>
             <Link href="/" className="text-4xl font-bold ">
               TIMIRI CIFFII

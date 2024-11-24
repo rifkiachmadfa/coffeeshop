@@ -4,7 +4,7 @@ import CardListProduk from "@/components/cardListProduk";
 export default function Home() {
   return (
     <>
-      <div className="absolute top-0 left-0 z-0">
+      <div className="absolute">
         <Image
           src="/sampleimage.jpg"
           alt=""

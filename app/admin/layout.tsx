@@ -6,10 +6,9 @@ export default function AdminLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen">
-      {/* Navigasi khusus untuk halaman admin */}
+    <section className="min-h-screen">
       <NavigasiAdmin />
       <main className="p-10">{children}</main>
-    </div>
+    </section>
   );
 }
