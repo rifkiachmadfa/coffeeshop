@@ -5,13 +5,7 @@ export default function Home() {
   return (
     <>
       <div className="absolute">
-        <Image
-          src="/sampleimage.jpg"
-          alt=""
-          width={1280}
-          height={500}
-          className="mb-10"
-        />
+        <Image src="/sampleimage.jpg" alt="" width={1280} height={500} className="mb-10" />
       </div>
 
       <div className="relative z-1  justify-center  top-[500px] pt-40 bg-white rounded-tr-[100px] rounded-tl-[100px]">
@@ -20,7 +14,7 @@ export default function Home() {
           <CardListProduk namaProduk="aren Latte" deskripsi="kopi mantap" />
           <CardListProduk namaProduk="aren Latte" deskripsi="kopi mantap" />
           <CardListProduk namaProduk="americano" deskripsi="kopi enak" />
-          <CardListProduk />
+          <CardListProduk namaProduk="kopi tubruk" deskripsi="kopi pait" />
           <CardListProduk />
           <CardListProduk />
           <CardListProduk />
