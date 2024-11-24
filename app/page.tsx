@@ -25,10 +25,6 @@ export default function Home() {
           <CardListProduk />
           <CardListProduk />
           <CardListProduk />
-          <CardListProduk />
-          <CardListProduk />
-          <CardListProduk />
-          <CardListProduk />
         </div>
       </div>
     </>
