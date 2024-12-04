@@ -1,11 +1,10 @@
-import { cn } from "@/lib/utils";
+
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
+
   navigationMenuTriggerStyle, // Huruf kecil di awal
 } from "@/components/ui/navigation-menu";
 

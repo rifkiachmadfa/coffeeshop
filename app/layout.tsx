@@ -1,7 +1,5 @@
 import "./globals.css";
-import NavigasiHomePage from "@/components/navigasiHomepage";
 import Footer from "@/components/footer";
-import { usePathname } from "next/navigation";
 
 export default function RootLayout({
   children,
