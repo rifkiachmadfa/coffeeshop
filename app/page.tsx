@@ -53,6 +53,7 @@ export default function Home() {
           <CardListProduk
             namaProduk="Aren Latte"
             deskripsi="Kopi Mantap"
+            harga = {19000}
             tambahProduk={tambahProduk}
             kurangProduk={kurangProduk}
             jumlah={keranjang["Aren Latte"] || 0} // Ambil jumlah dari state keranjang
@@ -60,9 +61,26 @@ export default function Home() {
           <CardListProduk
             namaProduk="Americano"
             deskripsi="Kopi Enak"
+            harga = {25000}
             tambahProduk={tambahProduk}
             kurangProduk={kurangProduk}
             jumlah={keranjang["Americano"] || 0}
+          />
+          <CardListProduk
+            namaProduk="Arabica"
+            deskripsi="Kopi Enak"
+            harga = {21000}
+            tambahProduk={tambahProduk}
+            kurangProduk={kurangProduk}
+            jumlah={keranjang["Arabica"] || 0}
+          />
+          <CardListProduk
+            namaProduk="Non coffee"
+            deskripsi="Kopi Enak"
+            harga = {22000}
+            tambahProduk={tambahProduk}
+            kurangProduk={kurangProduk}
+            jumlah={keranjang["Non coffee"] || 0}
           />
         </div>
       </div>

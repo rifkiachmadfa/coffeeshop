@@ -17,6 +17,7 @@ interface CardListProdukProps {
   deskripsi: string;
   tambahProduk: (namaProduk: string) => void;
   kurangProduk: (namaProduk: string) => void;
+  harga : number;
   jumlah: number;
 }
 
@@ -26,16 +27,21 @@ export default function CardListProduk({
   tambahProduk,
   kurangProduk,
   jumlah,
+  harga,
 }: CardListProdukProps) {
   return (
-    <div className="flex justify-center items-center">
-      <Card>
+    <div className="">
+      <Card className=" items-center">
         <CardHeader>
           <CardTitle>{namaProduk}</CardTitle>
           <CardDescription>{deskripsi}</CardDescription>
         </CardHeader>
-        <CardContent className="flex justify-center items-center">
+        <CardContent className="justify-center items-center">
           <Image alt="" src="/sampellistkopi.jpg" width={200} height={200} />
+          <div >
+
+          <p>Rp {harga}</p>
+          </div>
         </CardContent>
         <CardFooter className="flex justify-end gap-2">
           <Button onClick={() => kurangProduk(namaProduk)}>-</Button>
