@@ -1,10 +1,18 @@
-export default function Admin() {
-    return (
-        <>
-            <h1>ini jokowi</h1>
-            <p>isi defaultnya daftar menu yang tersedia, dapat diedit dan dihapus.</p>
-            <p>ada menu navigasi terdiri dari thumbnail, pesanan, tambah voucher, dan logout</p>
+import ActionPesanan from "@/components/actionpesanan";
+import DaftarPesanan from "@/components/daftarpesanan";
+import ProsesPesanan from "@/components/prosespesanan";
 
-        </>
-    )
+export default function Admin() {
+  // Fungsi yang menghasilkan elemen JSX
+  function actionPesanan() {
+    return <ActionPesanan />;
+  }
+
+  return (
+    <>
+       <ProsesPesanan />
+      {/* Kirim fungsi 'actionPesanan' ke DaftarPesanan */}
+      <DaftarPesanan action={actionPesanan} />
+    </>
+  );
 }
