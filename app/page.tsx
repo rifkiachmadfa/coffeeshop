@@ -20,7 +20,7 @@ export default function Home() {
           <p>fitur shorting</p>
           <div className="flex justify-center grid grid-cols-4 gap-8 mx-20">
             <CardListProduk namaProduk="aren Latte" deskripsi="kopi mantap" />
-            <CardListProduk namaProduk="aren Latte" deskripsi="kopi mantap" />
+            <CardListProduk namaProduk="matcha latte" deskripsi="original matcha" />
             <CardListProduk namaProduk="americano" deskripsi="kopi enak" />
             <CardListProduk />
             <CardListProduk />
