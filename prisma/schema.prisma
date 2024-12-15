@@ -22,3 +22,14 @@ model User {
   createdAt DateTime @default(now())
   updateAt DateTime @updatedAt
 }
+
+model Produk {
+  id      Int      @id @default(autoincrement())
+  namaProduk   String   
+  gambar String 
+  deskripsi String
+  harga String
+  stok Int
+  createdAt DateTime @default(now())
+  updateAt DateTime @updatedAt
+}

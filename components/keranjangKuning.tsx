@@ -16,17 +16,10 @@ interface KeranjangKuningProps {
       harga: number;
     };
   };
-  totalHarga: number;
 }
 
-export default function KeranjangKuning({ keranjang, totalHarga }: KeranjangKuningProps) {
+export default function KeranjangKuning({ keranjang }: KeranjangKuningProps) {
   const produkDalamKeranjang = Object.entries(keranjang);
-
-  // Format angka ke format Rupiah
-  const formatRupiah = new Intl.NumberFormat("id-ID", {
-    style: "currency",
-    currency: "IDR",
-  });
 
   return (
     <Popover>
@@ -39,18 +32,13 @@ export default function KeranjangKuning({ keranjang, totalHarga }: KeranjangKuni
             <ul>
               {produkDalamKeranjang.map(([namaProduk, { jumlah, harga }]) => (
                 <li key={namaProduk}>
-                  {jumlah}x {namaProduk} - {formatRupiah.format(harga)}
+                  {jumlah}x {namaProduk} - Rp {harga.toLocaleString("id-ID")}
                 </li>
               ))}
             </ul>
-            <div className="mt-5">
-              <p className="font-bold">
-                Total Harga: {formatRupiah.format(totalHarga)}
-              </p>
-              <Link href="/customer/checkout">
-                <Button>Checkout</Button>
-              </Link>
-            </div>
+            <Link href="/checkout">
+              <Button>Checkout</Button>
+            </Link>
           </>
         ) : (
           <p>Keranjang kosong</p>
