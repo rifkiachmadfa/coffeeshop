@@ -7,24 +7,45 @@ import KeranjangKuning from "@/components/keranjangKuning";
 import { useState } from "react";
 
 export default function Home() {
-  // State untuk menyimpan jumlah produk dalam keranjang
-  const [keranjang, setKeranjang] = useState<{ [namaProduk: string]: number }>({});
+  // State `keranjang` menyimpan jumlah dan harga produk
+  const [keranjang, setKeranjang] = useState<{
+    [namaProduk: string]: { jumlah: number; harga: number };
+  }>({});
 
   // Handler untuk menambah jumlah produk
-  const tambahProduk = (namaProduk: string) => {
+  const tambahProduk = (namaProduk: string, harga: number) => {
     setKeranjang((prev) => ({
       ...prev,
-      [namaProduk]: (prev[namaProduk] || 0) + 1, // Tambahkan 1 atau default ke 1
+      [namaProduk]: {
+        jumlah: (prev[namaProduk]?.jumlah || 0) + 1,
+        harga, // Harga tetap
+      },
     }));
   };
 
   // Handler untuk mengurangi jumlah produk
   const kurangProduk = (namaProduk: string) => {
-    setKeranjang((prev) => ({
-      ...prev,
-      [namaProduk]: Math.max((prev[namaProduk] || 0) - 1, 0), // Kurangi 1 tapi tidak boleh negatif
-    }));
+    setKeranjang((prev) => {
+      const updatedJumlah = (prev[namaProduk]?.jumlah || 0) - 1;
+  
+      if (updatedJumlah <= 0) {
+        const updatedCart = { ...prev }; // Salin objek
+        delete updatedCart[namaProduk]; // Hapus properti
+        return updatedCart;
+      }
+  
+      return {
+        ...prev,
+        [namaProduk]: {
+          ...prev[namaProduk],
+          jumlah: updatedJumlah,
+        },
+      };
+    });
   };
+  
+  
+
 
   return (
     <Template>
@@ -53,34 +74,18 @@ export default function Home() {
           <CardListProduk
             namaProduk="Aren Latte"
             deskripsi="Kopi Mantap"
-            harga = {19000}
+            harga={19000}
             tambahProduk={tambahProduk}
             kurangProduk={kurangProduk}
-            jumlah={keranjang["Aren Latte"] || 0} // Ambil jumlah dari state keranjang
+            jumlah={keranjang["Aren Latte"]?.jumlah || 0}
           />
           <CardListProduk
             namaProduk="Americano"
             deskripsi="Kopi Enak"
-            harga = {25000}
+            harga={25000}
             tambahProduk={tambahProduk}
             kurangProduk={kurangProduk}
-            jumlah={keranjang["Americano"] || 0}
-          />
-          <CardListProduk
-            namaProduk="Arabica"
-            deskripsi="Kopi Enak"
-            harga = {21000}
-            tambahProduk={tambahProduk}
-            kurangProduk={kurangProduk}
-            jumlah={keranjang["Arabica"] || 0}
-          />
-          <CardListProduk
-            namaProduk="Non coffee"
-            deskripsi="Kopi Enak"
-            harga = {22000}
-            tambahProduk={tambahProduk}
-            kurangProduk={kurangProduk}
-            jumlah={keranjang["Non coffee"] || 0}
+            jumlah={keranjang["Americano"]?.jumlah || 0}
           />
         </div>
       </div>

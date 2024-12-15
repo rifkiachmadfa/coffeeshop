@@ -15,9 +15,9 @@ import { Input } from "./ui/input";
 interface CardListProdukProps {
   namaProduk: string;
   deskripsi: string;
-  tambahProduk: (namaProduk: string) => void;
+  tambahProduk: (namaProduk: string, harga: number) => void;
   kurangProduk: (namaProduk: string) => void;
-  harga : number;
+  harga: number;
   jumlah: number;
 }
 
@@ -30,23 +30,20 @@ export default function CardListProduk({
   harga,
 }: CardListProdukProps) {
   return (
-    <div className="">
-      <Card className=" items-center">
+    <div>
+      <Card>
         <CardHeader>
           <CardTitle>{namaProduk}</CardTitle>
           <CardDescription>{deskripsi}</CardDescription>
         </CardHeader>
-        <CardContent className="justify-center items-center">
+        <CardContent className="flex justify-center items-center">
           <Image alt="" src="/sampellistkopi.jpg" width={200} height={200} />
-          <div >
-
-          <p>Rp {harga}</p>
-          </div>
+          <p>Rp {harga.toLocaleString("id-ID")}</p>
         </CardContent>
         <CardFooter className="flex justify-end gap-2">
           <Button onClick={() => kurangProduk(namaProduk)}>-</Button>
           <Input className="w-[42px] text-center" value={jumlah} readOnly />
-          <Button onClick={() => tambahProduk(namaProduk)}>+</Button>
+          <Button onClick={() => tambahProduk(namaProduk, harga)}>+</Button>
         </CardFooter>
       </Card>
     </div>
